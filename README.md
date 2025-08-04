@@ -414,22 +414,6 @@ node chatbot.js
 - JSON formatting for detailed logs
 - Clean separation of embedding data
 
-## 🎯 Use Cases
-
-### Medical Device Monitoring
-- **Real-time Alert Analysis**: Query device states and alert codes
-- **Ward-based Filtering**: Focus on specific hospital wards
-- **Error Pattern Detection**: Identify recurring issues
-
-### Operational Intelligence
-- **Device Performance**: Track execution duration and epoch counts
-- **User Activity**: Monitor user interactions and request patterns
-- **System Health**: Analyze log levels and message types
-
-### Debugging and Troubleshooting
-- **Error Investigation**: Natural language queries for specific issues
-- **Device History**: Track device state changes over time
-- **Correlation Analysis**: Find related logs across devices
 
 
 
