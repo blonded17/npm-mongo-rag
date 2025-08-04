@@ -1,4 +1,4 @@
-# Medical Device Log RAG Chatbot
+# Mongo RAG Chatbot
 
 A sophisticated **Retrieval-Augmented Generation (RAG)** system for querying medical device logs stored in MongoDB. This project implements a hybrid approach combining **direct MongoDB queries** with **semantic vector search** using Ollama's Mistral model and Nomic embeddings.
 
