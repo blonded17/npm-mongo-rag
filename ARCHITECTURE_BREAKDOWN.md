@@ -211,21 +211,6 @@ Question: ${question}
 Answer:`
 ```
 
----
-
-## Performance Characteristics
-
-### Response Times
-- **Direct Queries**: 50-100ms (lightning fast)
-- **RAG Queries**: 800-2000ms (AI processing)
-- **Vector Search**: 100-300ms (similarity search)
-- **Embedding Generation**: 200-500ms (text to vector)
-
-### Scalability
-- **Database**: Millions of medical device logs
-- **Concurrent Users**: 5-10 simultaneous users
-- **Memory Usage**: ~2GB for typical deployment
-- **Storage**: ~3KB per log document
 
 ---
 
@@ -290,25 +275,6 @@ if (databaseError) {
 
 ---
 
-## Future Architecture Enhancements
-
-### Short-term (3-6 months)
-1. **Web Interface**: Replace terminal with browser-based UI
-2. **REST API**: Enable external system integration
-3. **Real-time Alerts**: Email/SMS notifications for critical issues
-
-### Medium-term (6-12 months)
-1. **Analytics Dashboard**: Visual reporting and trends
-2. **Multi-tenant Support**: Multiple organization support
-3. **Advanced Filtering**: Complex query capabilities
-
-### Long-term (12+ months)
-1. **Predictive Analytics**: ML models for failure prediction
-2. **Mobile Application**: iOS/Android app
-3. **Custom AI Models**: Fine-tuned medical domain models
-
----
-
 ## Deployment Architecture
 
 ### Current Deployment
@@ -327,52 +293,6 @@ if (databaseError) {
 │   MongoDB       │    │   Ollama        │
 │   (Database)    │    │   (AI Engine)   │
 └─────────────────┘    └─────────────────┘
-```
-
-### Future Scalable Deployment
-```
-┌─────────────────┐
-│  Load Balancer  │
-└─────────────────┘
-         ↓
-┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
-│  Web Interface  │    │  API Gateway    │    │  Mobile App     │
-└─────────────────┘    └─────────────────┘    └─────────────────┘
-         ↓                     ↓                     ↓
-┌─────────────────┐
-│  Application    │
-│  Cluster        │
-└─────────────────┘
-         ↓
-┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
-│   MongoDB       │    │   Ollama        │    │   Redis Cache   │
-│   (Database)    │    │   (AI Engine)   │    │   (Caching)     │
-└─────────────────┘    └─────────────────┘    └─────────────────┘
-```
-
----
-
-## Monitoring & Observability
-
-### Key Metrics
-1. **Query Response Time**: Track performance across query types
-2. **Error Rates**: Monitor system reliability
-3. **User Activity**: Track adoption and usage patterns
-4. **Resource Utilization**: Monitor CPU, memory, storage
-
-### Health Checks
-```javascript
-// System health endpoint
-app.get('/health', async (req, res) => {
-  const dbStatus = await checkDatabase();
-  const aiStatus = await checkOllama();
-  res.json({ 
-    status: 'healthy',
-    database: dbStatus,
-    ai: aiStatus,
-    timestamp: new Date().toISOString()
-  });
-});
 ```
 
 ---
